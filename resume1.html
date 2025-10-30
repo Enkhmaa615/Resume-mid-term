@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Enkhmaa Gantulga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #0ea5a4;
+      --glass: rgba(14,165,164,0.08);
+      --max-width: 900px;
+      --radius: 12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    * { box-sizing: border-box }
+    body {
+      background: var(--bg);
+      color: #0f172a;
+      margin: 0;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .resume {
+      width: 100%;
+      max-width: var(--max-width);
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.98));
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 0;
+    }
+    /* left column */
+    .sidebar {
+      background: var(--card);
+      padding: 28px;
+      border-right: 1px solid #eef2f7;
+    }
+    .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--glass);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0;
+      text-align: center;
+    }
+    h2.title {
+      font-weight: 600;
+      font-size: 14px;
+      margin: 6px 0 16px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .student-id {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .contact, .section { margin-top: 18px }
+    .contact p {
+      margin: 8px 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .skill { margin-bottom: 12px }
+    .skill .bar {
+      height: 8px;
+      background: #eef2f7;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .skill .bar > i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #06b6d4);
+      border-radius: 99px;
+    }
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--glass);
+      font-size: 13px;
+      margin: 6px 6px 0 0;
+    }
+    /* main column */
+    .main { padding: 28px }
+    .headline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .headline .role { font-size: 18px; font-weight: 700 }
+    .summary {
+      margin-top: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .item { margin-top: 18px }
+    .item h3 { margin: 0; font-size: 16px }
+    .item .meta { font-size: 13px; color: var(--muted); margin-top: 6px }
+    .item ul { margin: 10px 0 0 18px }
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    /* footer actions */
+    .actions { display: flex; gap: 12px }
+    .btn {
+      background: transparent;
+      border: 1px solid #e6eef0;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn.primary { background: var(--accent); color: white; border: 0 }
+    @media (max-width:880px) {
+      .resume { grid-template-columns: 1fr; }
+      .sidebar { order: 2; border-right: 0; border-top: 1px solid #eef2f7; }
+    }
+    @media print {
+      body { padding: 0 }
+      .resume { box-shadow: none; border-radius: 0 }
+      .btn, .actions { display: none }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume" role="document" aria-label="Resume">
+    <aside class="sidebar">
+      <div class="photo" aria-hidden="true"><img src="img_1.jpg" alt="Enkhmaa Gantulga photo" /></div>
+      <div class="student-id">Student ID: 114035125</div>
+      <h1>Enkhmaa Gantulga</h1>
+      <div class="title">Finance Student • Asia University</div>
+      <div class="section contact">
+        <div class="label">Contact</div>
+        <p>Email: <strong>gantulgaenkhmaa36@gmail.com</strong></p>
+        <p>Phone: <strong>0970-321-826</strong></p>
+        <p>Location: <strong>Taichung, Taiwan</strong></p>
+        <p>LinkedIn: <strong>linkedin.com/in/enkhmaa-gantulga</strong></p>
+      </div>
+      <div class="section">
+        <div class="label">Skills</div>
+        <div class="skill"><div class="label">Financial Analysis</div><div class="bar"><i style="width:90%"></i></div></div>
+        <div class="skill"><div class="label">Data Analytics</div><div class="bar"><i style="width:85%"></i></div></div>
+        <div class="skill"><div class="label">Accounting & Reporting</div><div class="bar"><i style="width:80%"></i></div></div>
+      </div>
+      <div class="section">
+        <div class="label">Languages</div>
+        <div class="chip">Mongolian — Native</div>
+        <div class="chip">English — B2</div>
+        <div class="chip">Chinese — Conversational</div>
+      </div>
+      <div class="section">
+        <div class="label">Tools</div>
+        <div class="chip">Excel</div>
+        <div class="chip">EViews</div>
+        <div class="chip">Figma</div>
+        <div class="chip">TradingView</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="headline">
+        <div>
+          <div class="role">Finance Student & Data Analyst</div>
+          <div class="summary">
+            Passionate finance student skilled in accounting, financial modeling, and trade analysis. Experienced in supporting business decisions through data and reports. Currently pursuing a joint Bachelor’s program at Asia University (Taiwan) and the University of Finance and Economics (Mongolia).
+          </div>
+        </div>
+        <div class="actions" aria-hidden="true">
+          <button class="btn" onclick="window.print()">Print / Save PDF</button>
+          <button class="btn primary" onclick="downloadHTML()">Download .html</button>
+        </div>
+      </div>
+
+      <section class="item">
+        <h3>Experience</h3>
+        <article style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <strong>Trade Consultant</strong>
+              <div class="meta">Private Trading Company — Ulaanbaatar, Mongolia</div>
+            </div>
+            <div class="meta">Jan 2023 — Jun 2024</div>
+          </div>
+          <ul>
+            <li>Assisted in international trade documentation, pricing, and import/export coordination.</li>
+            <li>Prepared sales reports, monitored exchange rate fluctuations, and supported client communication.</li>
+          </ul>
+        </article>
+
+        <article style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <strong>Junior Accountant</strong>
+              <div class="meta">ABC Accounting Firm — Ulaanbaatar, Mongolia</div>
+            </div>
+            <div class="meta">Jul 2022 — Dec 2022</div>
+          </div>
+          <ul>
+            <li>Recorded journal entries, prepared monthly balance sheets, and reconciled transactions.</li>
+            <li>Supported senior accountants in tax preparation and client financial audits.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="item two-cols">
+        <div>
+          <h3>Education</h3>
+          <div style="margin-top:10px">
+            <strong>Bachelor of Finance (Joint Program)</strong>
+            <div class="meta">Asia University (Taiwan) & University of Finance and Economics (Mongolia)</div>
+            <div class="meta">Expected Graduation: 2025 | GPA: 3.2</div>
+            <ul>
+              <li>Relevant coursework: Financial Management, Econometrics, Corporate Finance</li>
+            </ul>
+          </div>
+          <div style="margin-top:16px">
+            <strong>33rd High School</strong>
+            <div class="meta">Ulaanbaatar, Mongolia</div>
+            <div class="meta">Graduated: 2021</div>
+          </div>
+
+          <h3 style="margin-top:18px">Projects</h3>
+          <ul style="margin-top:10px">
+            <li>Lease vs Purchase financial model — analyzed depreciation, tax, and discounted cash flows.</li>
+            <li>TradingView project — created a simulated trading portfolio with data visualization reports.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <p style="margin-top:10px">Google Data Analytics — Coursera</p>
+          <p>CFA Level I Candidate (if applicable)</p>
+
+          <h3 style="margin-top:18px">Interests</h3>
+          <p style="margin-top:10px;color:var(--muted)">Budget travel, baking, open-source data tools, and financial markets.</p>
+        </div>
+      </section>
+
+      <section class="item" style="margin-top:18px">
+        <h3>Other Experience & Activities</h3>
+        <ul>
+          <li>Peer tutor for Financial Management (English) — led weekly study sessions.</li>
+          <li>Volunteer at campus recycling initiative — organized awareness campaigns.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function downloadHTML() {
+      const blob = new Blob([document.documentElement.outerHTML], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'resume-enkhmaa-gantulga.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
